@@ -11,8 +11,8 @@ css
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-hover-color: rgba(0, 0, 0, 0.02);
-  --social-icon-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assents/moon-stars.svg);
+  --social-icon-color: rgba(255, 255, 255, 0.2);
+ --switch-bg-url: url(./assents/moon-stars.svg);
 
 }
 
@@ -82,11 +82,16 @@ body * {
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back .2s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--social-icon-color);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in .2s forwards;
 }
 
 #switch span {
@@ -166,5 +171,24 @@ footer {
 
 .light {
      --bg-url: url(./assents/bg-desktop-light.jpeg.jpg);
+}
+}
+
+/*animation*/
+@keyframes slide-in {
+from {
+  left: 0;
+}
+to {
+  left: 50%;
+}
+}
+
+@keyframes slide-back {
+from {
+  left: 50%;
+}
+to {
+  left: 0%;
 }
 }
