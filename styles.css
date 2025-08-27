@@ -161,6 +161,13 @@ footer {
   font-size: 14px;
   color: var(--text-color);
   margin-top: 24px;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+footer a {
+  text-decoration: none;
+  opacity: 0.5;
 }
 
 /* media queries */
